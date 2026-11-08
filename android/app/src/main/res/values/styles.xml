@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2026 Gerard Braad (Regroove | RGRV) -->
+<!--
+    Theme for the ROM screen. UserFsActivity colours every view from
+    colors.xml; the theme supplies the window background, text selection
+    handles, and defaults for views added later.
+
+    AAPT rejects a comment containing a double hyphen.
+-->
+<resources>
+
+    <style name="UserFsTheme" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+        <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+        <item name="android:alertDialogTheme">@style/UserFsDialog</item>
+    </style>
+
+    <!-- Delete confirmation. Theme.Material.Dialog.Alert takes colorAccent. -->
+    <style name="UserFsDialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/colorSurface</item>
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+        <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+    </style>
+
+</resources>
